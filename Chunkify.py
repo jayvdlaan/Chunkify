@@ -90,8 +90,8 @@ def Process(a_InputFile, a_OutputFileName, a_Scale, a_GPUCount, a_ConcatenateVid
 
 def Main(a_Args):
     try:
-        Options, Arguments = getopt.getopt(a_Args, "h:i:o:g:s:c:")
-    except getopt.GetoptError:
+        Options, Arguments = getopt.getopt(a_Args, "hi:o:g:s:c")
+    except getopt.GetoptError as err:
         print("Chunkify.py -h for instructions")
         return
 
@@ -118,14 +118,16 @@ def Main(a_Args):
         elif Option == "-c":
             if Argument == "Y":
                 ConcatenateVid = True
-        elif Option == "-h":
-           print("Chunkify - Evenly divide upscaling workload over multiple GPUs\n"
-                 "\n"
-                 "-i (Required) <Video input path> - Specify the video to upscale.\n"
-                 "-o <Output name> - Specify the name of the generated video (default is: video).\n"
-                 "-g <GPU count> - Specify the amount of GPUs present on this system (default is 1).\n"
-                 "-s <Scale> - Specify the desired upscaling percentage (100 for 100%, 600 for 600% etc)(default is 200).\n"
-                 "-c <Toggle> - Toggle whether to concatenate the created video chunks into one video (Y/N)(default is N).\n")
+        else:
+            print("Chunkify - Evenly divide upscaling workload over multiple GPUs\n"
+                  "\n"
+                  "-i (Required) <Video input path> - Specify the video to upscale.\n"
+                  "-o <Output name> - Specify the name of the generated video (default is: video).\n"
+                  "-g <GPU count> - Specify the amount of GPUs present on this system (default is 1).\n"
+                  "-s <Scale> - Specify the desired upscaling percentage (100 for 100%, 600 for 600% etc)(default is 200).\n"
+                  "-c - Provide flag to toggle whether to concatenate the created video chunks into one video.\n")
+
+            return
 
     if ReqOptionCheck is True:
         Process(InPath, OutName, Scale, GPUCount, ConcatenateVid)

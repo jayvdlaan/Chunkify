@@ -16,4 +16,4 @@ eachother.
 - -o <Output name> - Specify the name of the generated video (default is: video).
 - -g <GPU count> - Specify the amount of GPUs present on this system (default is 1).
 - -s <Scale> - Specify the desired upscaling percentage (100 for 100%, 600 for 600% etc)(default is 200).
-- -c <Toggle> - Toggle whether to concatenate the created video chunks into one video (Y/N)(default is N).
+- -c - Provide flag to toggle whether to concatenate the created video chunks into one video.
