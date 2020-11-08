@@ -100,7 +100,7 @@ def Main(a_Args):
         return
 
     ReqOptionCheck = False
-    OutName = "video.mkv"
+    OutName = "video"
     GPUCount = 1
     Scale = 2.0
     InPath = ""
@@ -122,7 +122,7 @@ def Main(a_Args):
            print("Chunkify - Evenly divide upscaling workload over multiple GPUs\n"
                  "\n"
                  "-i (Required) <Video input path> - Specify the video to upscale.\n"
-                 "-o <Output name> - Specify the name of the generated video (default is video.mkv).\n"
+                 "-o <Output name> - Specify the name of the generated video (default is: video).\n"
                  "-g <GPU count> - Specify the amount of GPUs present on this system (default is 1).\n"
                  "-s <Scale> - Specify the desired upscaling percentage (100 for 100%, 600 for 600% etc)(default is 200).\n"
                  "-c <Toggle> - Toggle whether to concatenate the created video chunks into one video (Y/N)(default is N).\n")
