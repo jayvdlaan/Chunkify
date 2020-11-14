@@ -1,5 +1,9 @@
 # Chunkify
 
+[![Updated Badge](https://badges.pufler.dev/updated/Teitoku42/Chunkify)](https://badges.pufler.dev)
+[![Created Badge](https://badges.pufler.dev/created/Teitoku42/Chunkify)](https://badges.pufler.dev)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 This script was created to solve a problem I had while using Topaz Video Enhance AI, namely the fact that there is
 no easy way to spread the upscaling workload of one video over several GPUs. Henceforth I created this script.
 This script allows you to specify the amount of GPUs in your system and evenly spread the upscaling workload of one
